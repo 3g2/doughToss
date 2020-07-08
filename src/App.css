@@ -7,6 +7,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  border-bottom: solid;
 }
 
 .nav-links {
@@ -15,4 +16,9 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.nav-style {
+  text-decoration: none;
+  color: black;
 }
