@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import MenuItems from './MenuItems';
 import '../App.css';
 
-const MenuPage = () => (
-    <div>
-        Menu
-    </div>
-);
+class MenuPage extends Component {
+    render() {
+        
+        
+        const menuList = MenuItems.map(item => {
+            return (
+                items
+            );
+        })
+        return ( 
+            <div>
+                items
+            </div>
+        );
+    }
+};
 
 export default MenuPage;
