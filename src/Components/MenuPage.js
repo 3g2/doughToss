@@ -1,31 +1,15 @@
-import React, { Component } from 'react';
-import MenuItems from './MenuItems';
+import React, { useState } from 'react';
+import { SearchMenuItem } from './SearchMenuItem';
+import { MenuList } from './MenuList';
 import '../App.css';
 
-class MenuPage extends Component {
-    render() {
-        
-        
-        const menuList = MenuItems.map(item => {
-            return (
-                <div key={item.id} className="menu-item">
-                    <button className="menu-item-btn">
-                        <img src={item.img} alt={item.alt}></img>
-                        <div className="menu-item-desc">
-                            <p>{item.name}</p>
-                            <p>${item.price}</p>
-                        </div>
-                    </button>
-                </div>
-            );
-        });
+export function MenuPage() {
+    const [searchValue, setSearchValue] = useState();
 
-        return ( 
-            <ul className="menu">
-                {menuList}
-            </ul>
-        );
-    }
-};
-
-export default MenuPage;
+    return ( 
+        <div>
+            <SearchMenuItem searchValue={searchValue} setSearchValue={setSearchValue} />
+            <MenuList />
+        </div>
+    );
+}
