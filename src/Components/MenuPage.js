@@ -8,13 +8,22 @@ class MenuPage extends Component {
         
         const menuList = MenuItems.map(item => {
             return (
-                items
+                <div key={item.id} className="menu-item">
+                    <button className="menu-item-btn">
+                        <img src={item.img} alt={item.alt}></img>
+                        <div className="menu-item-desc">
+                            <p>{item.name}</p>
+                            <p>${item.price}</p>
+                        </div>
+                    </button>
+                </div>
             );
-        })
+        });
+
         return ( 
-            <div>
-                items
-            </div>
+            <ul className="menu">
+                {menuList}
+            </ul>
         );
     }
 };

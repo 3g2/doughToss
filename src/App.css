@@ -22,3 +22,37 @@ nav {
   text-decoration: none;
   color: black;
 }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em 2em 2em 2em
+}
+
+.menu-item {
+  display: flex;
+  margin: 2em;
+}
+
+.menu-item-btn {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.menu-item-btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  transition: 0.23s;
+}
+
+.menu-item img {
+  width: 275px;
+  height: 175px;
+}
+.menu-item-desc {
+  display: flex;
+  justify-content: space-around;
+}
