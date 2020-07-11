@@ -16,6 +16,7 @@ class SearchMenuItem extends Component {
                         placeholder="Search for a specific pizza..."
                         ref={ (value) => {this.myValue = value}}
                         onChange={this.filterUpdate.bind(this)}
+                        className="menu-item-search"
                     />
                 </form>
             </div>

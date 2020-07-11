@@ -62,3 +62,13 @@ nav {
   display: flex;
   justify-content: center;
 }
+
+.menu-list-fav {
+  background-color: #D7D7D7;
+}
+
+.menu-item-search {
+  justify-content: center;
+  align-content: center;
+  margin: 2em;
+}

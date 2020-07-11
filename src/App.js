@@ -4,7 +4,7 @@ import Nav from './Components/Nav';
 import Home from './Components/HomePage';
 import AboutPage from './Components/AboutPage';
 import MenuPage  from './Components/MenuPage/MenuPage';
-import ContactPage from './Components/ContactPage';
+import ContactPage from './Components/ContactPage/ContactPage';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 class App extends Component {

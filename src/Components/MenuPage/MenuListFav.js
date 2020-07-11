@@ -6,7 +6,7 @@ class MenuListFav extends Component {
         return (
             <div className="menu-list-fav">
                 <h3>Click on the items to favorite</h3>
-               {favorite}
+                {favorite}
             </div>
         );
     }
