@@ -1,27 +1,26 @@
-import React, { useEffect, useRef } from "react";
+import React, { Component } from "react";
 
-export function SearchMenuItem(searchValue, setSearchValue) {
-        const inputRef = useRef();
+class SearchMenuItem extends Component {
 
-        useEffect(() => {
-            inputRef.current.focus();
-        }, []);
+    filterUpdate() {
+        const val = this.myValue.value;
+        this.props.filterUpdate(val);
+    }
 
-        function handleChange(event) {
-            setSearchValue(event.target.value);
-        }
-
+    render(){
         return (
             <div>
                 <form>
                     <input
                         type="text"
                         placeholder="Search for a specific pizza..."
-                        value={searchValue}
-                        onChange={handleChange}
-                        ref={inputRef}
+                        ref={ (value) => {this.myValue = value}}
+                        onChange={this.filterUpdate.bind(this)}
                     />
                 </form>
             </div>
         );
+    }
 }
+
+export default SearchMenuItem;

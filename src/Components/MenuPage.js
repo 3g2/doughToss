@@ -1,15 +1,36 @@
-import React, { useState } from 'react';
-import { SearchMenuItem } from './SearchMenuItem';
-import { MenuList } from './MenuList';
+import React, { Component } from 'react';
+import SearchMenuItem  from './SearchMenuItem';
+import { MenuList} from './MenuList';
 import '../App.css';
 
-export function MenuPage() {
-    const [searchValue, setSearchValue] = useState();
+class MenuPage extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            filterText: ''
+        }
+    }
 
-    return ( 
-        <div>
-            <SearchMenuItem searchValue={searchValue} setSearchValue={setSearchValue} />
-            <MenuList />
-        </div>
-    );
+    filterUpdate(value) {
+        this.setState({
+            filterText: value
+        })
+    }
+    
+    render() {
+        return ( 
+            <div>
+                <SearchMenuItem 
+                    filterText={this.state.filterText}
+                    filterUpdate={this.filterUpdate.bind(this)}
+                />
+                <MenuList 
+                    filterText={this.state.filterText}
+                />
+            </div>
+        );
+    }
+    
 }
+
+export default MenuPage;
