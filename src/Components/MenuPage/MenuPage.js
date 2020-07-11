@@ -19,7 +19,10 @@ class MenuPage extends Component {
     }
 
     addFavorite(id) {
-        console.log(id)
+        const list = this.state.favorite.concat(<li className="menu-item-fav-li">{[id]}</li>);
+        this.setState({
+            favorite: list
+        })
     }
     
     render() {

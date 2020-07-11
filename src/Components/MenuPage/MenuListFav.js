@@ -4,8 +4,9 @@ class MenuListFav extends Component {
     render() {
         const { favorite } = this.props;
         return (
-            <div className="menu-list-favorite">
+            <div className="menu-list-fav">
                 <h3>Click on the items to favorite</h3>
+               {favorite}
             </div>
         );
     }

@@ -10,7 +10,7 @@ class MenuList extends Component {
             })
             .map(item => {
                 return (
-                    <div key={item.id} className="menu-item" onClick={() => addFavorite(item.id)}>
+                    <div key={item.id} className="menu-item" onClick={() => addFavorite(item.name)}>
                         <button className="menu-item-btn">
                             <img src={item.img} alt={item.alt}></img>
                             <div className="menu-item-desc">
