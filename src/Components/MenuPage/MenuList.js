@@ -3,14 +3,14 @@ import MenuItems from './MenuItems';
 
 class MenuList extends Component {
     render() {
-        const { filterText } = this.props; //arguments in stateless functions
+        const { filterText, addFavorite } = this.props; //arguments in stateless functions
         const menuList = MenuItems
             .filter(item => {
                 return item.name.toLowerCase().indexOf(filterText.toLowerCase()) > -1
             })
             .map(item => {
                 return (
-                    <div key={item.id} className="menu-item">
+                    <div key={item.id} className="menu-item" onClick={() => addFavorite(item.id)}>
                         <button className="menu-item-btn">
                             <img src={item.img} alt={item.alt}></img>
                             <div className="menu-item-desc">

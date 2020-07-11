@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import SearchMenuItem  from './SearchMenuItem';
+import MenuListFav from './MenuListFav';
 import MenuList from './MenuList';
-import '../App.css';
 
 class MenuPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            filterText: ''
+            filterText: '',
+            favorite: []
         }
     }
 
@@ -15,6 +16,10 @@ class MenuPage extends Component {
         this.setState({
             filterText: value
         })
+    }
+
+    addFavorite(id) {
+        console.log(id)
     }
     
     render() {
@@ -24,8 +29,12 @@ class MenuPage extends Component {
                     filterText={this.state.filterText}
                     filterUpdate={this.filterUpdate.bind(this)}
                 />
+                <MenuListFav 
+                     favorite={this.state.favorite}
+                />
                 <MenuList 
                     filterText={this.state.filterText}
+                    addFavorite={this.addFavorite.bind(this)}
                 />
             </div>
         );
