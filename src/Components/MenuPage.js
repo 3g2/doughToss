@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchMenuItem  from './SearchMenuItem';
-import { MenuList} from './MenuList';
+import MenuList from './MenuList';
 import '../App.css';
 
 class MenuPage extends Component {
