@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Nav from './Components/Nav';
-import Home from './Components/HomePage';
+import Home from './Components/HomePage/HomePage';
 import AboutPage from './Components/AboutPage';
 import MenuPage  from './Components/MenuPage/MenuPage';
 import ContactPage from './Components/ContactPage/ContactPage';

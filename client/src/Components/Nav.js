@@ -3,7 +3,7 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 
 const Nav = () => (
-    <nav>
+    <div className="nav">
         <Link to="/" className="nav-style">
             <h1>Logo</h1>
         </Link>
@@ -18,7 +18,7 @@ const Nav = () => (
                 <li>Contact</li>
             </Link>
         </ul>
-    </nav>
+    </div>
 );
 
 export default Nav;

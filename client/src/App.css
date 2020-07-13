@@ -2,12 +2,13 @@
   text-align: center;
 }
 
-nav {
+.nav {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
   min-height: 10vh;
   border-bottom: solid;
+  margin: 1vh;
 }
 
 .nav-links {
@@ -71,4 +72,13 @@ nav {
   justify-content: center;
   align-content: center;
   margin: 2em;
+}
+
+.home-page {
+  margin: 2em, 2em, 2em, 2em
+}
+
+.carousel-slider img {
+  width: 100%;
+  height: auto;
 }
